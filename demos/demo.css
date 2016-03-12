@@ -1,0 +1,9 @@
+body {
+  box-sizing: border-box;
+  font-family: RobotoDraft, Roboto, sans-serif;
+}
+
+.main-wrapper {
+  width: 985px;
+  margin: 0 auto 24px;
+}

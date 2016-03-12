@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Material Steppers</title>
+    <link href="angular-material/angular-material.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic" rel="stylesheet">
+    <link href="angular-material-steppers.css" rel="stylesheet">
+    <link href="demo.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="angular-material-steppers">
+    <div class="md-steppers">
+      <div class="md-steppers-header" layout>
+        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="start start">
+          <div class="md-stepper-indicator-wrapper" layout>
+            <div class="md-stepper-number">
+              <md-icon class="md-stepper-icon">check</md-icon>
+            </div>
+            <span class="md-stepper-title">Select campaign settings</span>
+          </div>
+        </div>
+
+        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="start start">
+          <div class="md-stepper-indicator-wrapper" layout>
+            <div class="md-stepper-number">
+              <md-icon class="md-stepper-icon md-stepper-icon-edit">edit</md-icon>
+            </div>
+            <span class="md-stepper-title">Create an ad group</span>
+          </div>
+        </div>
+
+        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="end start">
+          <div class="md-stepper-indicator-wrapper" layout>
+            <div class="md-stepper-number">3</div>
+            <span class="md-stepper-title">Create an ad</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-steppers-content">
+        <div class="md-stepper">
+
+        </div>
+      </div>
+
+      <div class="md-steppers-action" layout>
+        <md-button class="md-primary">Back</md-button>
+        <span flex></span>
+
+        <md-button>Cancel</md-button>
+        <md-button class="md-primary">Next</md-button>
+      </div>
+    </div>
+
+    <script src="angular/angular.js"></script>
+    <script src="angular-animate/angular-animate.js"></script>
+    <script src="angular-aria/angular-aria.js"></script>
+    <script src="angular-material/angular-material.js"></script>
+    <script src="angular-material-steppers.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
