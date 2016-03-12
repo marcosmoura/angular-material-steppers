@@ -1,11 +1,11 @@
 {
-  "projectName": "Angular Material Data Table",
-  "name": "angular-material-data-table",
-  "description": "Angular Material Data Table",
+  "projectName": "Angular Material Steppers",
+  "name": "angular-material-steppers",
+  "description": "A Angular Material directive to create Steppers following the Material Design spec.",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcosmoura/angular-material-data-table.git"
+    "url": "https://github.com/marcosmoura/angular-material-steppers.git"
   },
   "authors": [
     "Marcos Moura <marcosvmmoura@gmail.com>"
@@ -24,9 +24,9 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "^1.4.9",
-    "angular-animate": "^1.4.9",
-    "angular-aria": "^1.4.9",
-    "angular-material": "^1.0.2"
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-material": "^1.0.6"
   }
 }
