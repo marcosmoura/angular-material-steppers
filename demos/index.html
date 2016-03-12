@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Angular Material Steppers</title>
     <link href="angular-material/angular-material.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,33 +12,45 @@
   </head>
 
   <body ng-app="angular-material-steppers">
-    <div class="md-steppers">
-      <div class="md-steppers-header" layout>
-        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="start start">
-          <div class="md-stepper-indicator-wrapper" layout>
-            <div class="md-stepper-number">
-              <md-icon class="md-stepper-icon">check</md-icon>
-            </div>
-            <span class="md-stepper-title">Select campaign settings</span>
-          </div>
-        </div>
-
-        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="start start">
-          <div class="md-stepper-indicator-wrapper" layout>
+    <div class="md-steppers md-steppers-linear md-steppers-alternative">
+      <md-card class="md-steppers-header">
+        <button class="md-stepper-indicator md-completed md-editable" md-ink-ripple>
+          <div class="md-stepper-indicator-wrapper">
             <div class="md-stepper-number">
               <md-icon class="md-stepper-icon md-stepper-icon-edit">edit</md-icon>
             </div>
-            <span class="md-stepper-title">Create an ad group</span>
+            <!-- <div class="md-stepper-number">1</div> -->
+            <span class="md-stepper-title">Select campaign</span>
           </div>
-        </div>
+        </button>
 
-        <div class="md-stepper-indicator" md-ink-ripple flex="noshrink" layout layout-align="end start">
-          <div class="md-stepper-indicator-wrapper" layout>
+        <button class="md-stepper-indicator md-active">
+          <div class="md-stepper-indicator-wrapper">
+            <div class="md-stepper-number">
+              <md-icon class="md-stepper-icon">check</md-icon>
+            </div>
+            <!-- <div class="md-stepper-number">2</div> -->
+            <span class="md-stepper-title">Create an ad</span>
+          </div>
+        </button>
+
+        <button class="md-stepper-indicator">
+          <div class="md-stepper-indicator-wrapper">
             <div class="md-stepper-number">3</div>
             <span class="md-stepper-title">Create an ad</span>
           </div>
-        </div>
-      </div>
+        </button>
+
+        <button class="md-stepper-indicator md-stepper-optional">
+          <div class="md-stepper-indicator-wrapper">
+            <div class="md-stepper-number">4</div>
+            <div class="md-stepper-title">
+              <span>Publish the ad</span>
+              <small>Optional</small>
+            </div>
+          </div>
+        </button>
+      </md-card>
 
       <div class="md-steppers-content">
         <div class="md-stepper">
@@ -45,7 +58,7 @@
         </div>
       </div>
 
-      <div class="md-steppers-action" layout>
+      <div class="md-steppers-actions">
         <md-button class="md-primary">Back</md-button>
         <span flex></span>
 

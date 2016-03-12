@@ -9,10 +9,6 @@ let watchConfig = {
 };
 
 gulp.task('watch', ['browserSync'], () => {
-  watch(config.srcScripts, watchConfig, () => {
-    runSequence('webpack', browserSync.reload);
-  });
-
   watch(config.gulpScripts.concat(config.srcScripts), watchConfig, () => {
     runSequence('eslint');
   });

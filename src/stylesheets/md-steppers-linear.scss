@@ -1,0 +1,29 @@
+.md-steppers-linear {
+  .md-stepper-indicator {
+    cursor: default;
+
+    &.md-editable.md-completed:hover {
+      cursor: pointer;
+
+      &,
+      .md-stepper-indicator-wrapper {
+        background-color: #F6F6F6;
+      }
+
+      .md-stepper-number {
+        &:before,
+        &:after {
+          background-color: #F6F6F6;
+        }
+      }
+    }
+  }
+
+  .md-stepper-title {
+    color: rgba(0, 0, 0, .26);
+
+    small {
+      color: rgba(0, 0, 0, .26);
+    }
+  }
+}

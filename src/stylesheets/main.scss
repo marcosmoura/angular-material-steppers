@@ -1,97 +1,15 @@
+/* Import Core */
 @import 'variables';
+@import 'core';
 
-.md-stepper-indicator {
-  height: 72px;
-  padding: 24px 16px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: $swift-ease-out;
 
-  &:hover {
-    &,
-    .md-stepper-indicator-wrapper {
-      background-color: #F6F6F6;
-    }
-  }
+/* Linear Steppers */
+@import 'md-steppers-linear';
 
-  &:first-child {
-    padding-left: 0;
 
-    .md-stepper-indicator-wrapper {
-      padding-left: 24px;
-    }
-  }
+/* Alternative Labels */
+@import 'md-steppers-alternative';
 
-  &:last-child {
-    padding-right: 0;
-    text-align: right;
 
-    .md-stepper-indicator-wrapper {
-      padding-right: 24px;
-    }
-  }
-
-  &:after {
-    width: 999em;
-    height: 1px;
-    margin-top: -1px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 1;
-    background-color: #E8E8E8;
-    content: " ";
-  }
-
-  .md-ripple-container {
-    z-index: 3;
-  }
-}
-
-.md-stepper-indicator-wrapper {
-  padding: 0 8px;
-  position: relative;
-  z-index: 2;
-  background-color: #fff;
-  transition: $swift-ease-out;
-}
-
-.md-stepper-title {
-  margin-left: 8px;
-  position: relative;
-}
-
-.md-stepper-number {
-  $size: 24px;
-
-  width: $size;
-  height: $size;
-  border-radius: $size;
-  background-color: #2196F3;
-  color: #fff;
-  font-size: 12px;
-  line-height: $size;
-  text-align: center;
-}
-
-.md-stepper-icon {
-  $size: 18px;
-
-  width: $size;
-  height: $size;
-  position: relative;
-  top: -1px;
-  color: #fff;
-  font-size: $size;
-  font-weight: 700;
-
-  &.md-stepper-icon-edit {
-    $size: 14px;
-
-    width: $size;
-    height: $size;
-    font-size: $size;
-    font-weight: 400;
-  }
-}
+/* Optional Step */
+@import 'md-steppers-optional';

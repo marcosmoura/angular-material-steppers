@@ -1,0 +1,83 @@
+.md-steppers-alternative {
+  &:not(.md-steppers-linear) {
+    .md-stepper-indicator:not(.md-active):not(.md-completed):hover {
+      .md-stepper-indicator-wrapper {
+        background: none;
+      }
+
+      .md-stepper-number {
+        &:before,
+        &:after {
+          background-color: #F6F6F6;
+        }
+      }
+    }
+  }
+
+  .md-stepper-indicator {
+    min-height: 104px;
+    padding: 24px 0;
+    flex: 1;
+    justify-content: center;
+
+    &:first-child {
+      &:after {
+        left: 50%;
+      }
+
+      .md-stepper-indicator-wrapper {
+        padding-left: 24px;
+      }
+    }
+
+    &:last-child {
+      &:after {
+        right: 50%;
+        left: auto;
+      }
+    }
+
+    &:after {
+      margin-top: 0;
+      top: 36px;
+    }
+  }
+
+  .md-stepper-indicator-wrapper {
+    padding: 0 16px;
+    min-height: 72px;
+    flex-flow: column nowrap;
+    background: none;
+  }
+
+  .md-stepper-number {
+    position: relative;
+
+    &:before,
+    &:after {
+      width: 8px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: #fff;
+      transition: $swift-ease-out;
+      content: " ";
+    }
+
+    &:before {
+      left: -8px;
+    }
+
+    &:after {
+      right: -8px;
+    }
+  }
+
+  .md-stepper-title {
+    margin-top: 8px;
+
+    small {
+      text-align: center;
+    }
+  }
+}

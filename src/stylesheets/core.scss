@@ -1,0 +1,159 @@
+.md-steppers {
+  display: flex;
+  flex-flow: column;
+
+  &:not(.md-steppers-linear) {
+    .md-stepper-indicator {
+      &:not(.md-active):not(.md-completed):hover,
+      &.md-editable.md-completed:hover {
+        cursor: pointer;
+
+        &,
+        .md-stepper-indicator-wrapper {
+          background-color: #F6F6F6;
+        }
+      }
+    }
+  }
+}
+
+.md-steppers-header {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 0;
+}
+
+.md-stepper-indicator {
+  min-height: 72px;
+  padding: 0 16px;
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  align-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  cursor: default;
+  background: none;
+  border: none;
+  transition: $swift-ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-child {
+    padding-left: 0;
+
+    .md-stepper-indicator-wrapper {
+      padding-left: 16px;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+    justify-content: flex-end;
+
+    .md-stepper-indicator-wrapper {
+      padding-right: 24px;
+    }
+  }
+
+  &.md-completed,
+  &.md-active {
+    .md-stepper-number {
+      background-color: #2196F3;
+    }
+
+    .md-stepper-title {
+      color: rgba(0, 0, 0, .87);
+    }
+  }
+
+  &.md-active,
+  &.md-editable {
+    .md-stepper-title {
+      font-weight: 500;
+    }
+  }
+
+  &:after {
+    width: 999em;
+    height: 1px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    background-color: #E8E8E8;
+    content: " ";
+  }
+
+  .md-ripple-container {
+    z-index: 3;
+  }
+}
+
+.md-stepper-indicator-wrapper {
+  padding: 0 8px 0 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-color: #fff;
+  transition: $swift-ease-out;
+}
+
+.md-stepper-number {
+  $size: 24px;
+
+  width: $size;
+  height: $size;
+  margin: 0 8px;
+  border-radius: $size;
+  background-color: #BDBDBD;
+  transition: $swift-ease-out;
+  color: #fff;
+  font-size: 12px;
+  line-height: $size;
+  text-align: center;
+}
+
+.md-stepper-icon {
+  $size: 18px;
+
+  width: $size;
+  height: $size;
+  position: relative;
+  top: -1px;
+  color: #fff;
+  font-size: $size;
+  font-weight: 700;
+
+  &.md-stepper-icon-edit {
+    $size: 14px;
+
+    width: $size;
+    height: $size;
+    font-size: $size;
+    font-weight: 400;
+  }
+}
+
+.md-stepper-title {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  transition: $swift-ease-out;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.md-steppers-content {
+  flex: 1;
+}
+
+.md-steppers-actions {
+  display: flex;
+}
