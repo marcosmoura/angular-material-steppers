@@ -3,7 +3,7 @@ import template from './template';
 
 let component = 'mdSteppers';
 
-let directive = () => {
+let directive = ($mdComponentRegistry, $log) => {
 
   return {
     restrict: 'E',
@@ -13,6 +13,17 @@ let directive = () => {
       alternative: '=?mdAlternative'
     },
     template,
+    link: ($scope, $element, $attributes, $controller) => {
+      if (!$attributes.id) {
+        $log.warn('You must set an id attribute to your stepper');
+      }
+
+      $mdComponentRegistry.register({
+        changeStep: $controller.changeStep,
+        setCompleted: $controller.setCompleted,
+        isActive: $controller.isActive
+      }, $attributes.id);
+    },
     controller,
     controllerAs: `$${component}`,
     bindToController: true

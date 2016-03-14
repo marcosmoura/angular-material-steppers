@@ -1,8 +1,9 @@
 export default function($element, $attributes) {
 
   let $steppersContent = `
-    <button class="md-stepper-indicator"
-      ng-repeat="(stepNumber, $step) in $mdSteppers.steps"
+    <button
+      class="md-stepper-indicator"
+      ng-repeat="(stepNumber, $step) in $mdSteppers.steps track by $index"
       ng-class="{
         'md-active': $mdSteppers.isActive(stepNumber),
         'md-completed': $mdSteppers.isCompleted(stepNumber),
@@ -35,7 +36,7 @@ export default function($element, $attributes) {
     <div class="md-steppers" ng-class="{ 'md-steppers-linear': $mdSteppers.linear, 'md-steppers-alternative': $mdSteppers.alternative }">
       ${$steppersHeader}
       <md-steppers-content class="md-steppers-content">${$element.html()}</md-steppers-content>
-      <md-steppers-actions class="md-steppers-actions">${$steppersActions}</md-steppers-actions>
+      <md-steppers-actions md-steppers-scope class="md-steppers-actions">${$steppersActions}</md-steppers-actions>
     </div>
   `;
 

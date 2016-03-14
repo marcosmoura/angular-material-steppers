@@ -115,7 +115,7 @@
       <md-button class="md-primary md-raised" ng-click="app.toggleAlternative();">Toggle Alternative</md-button>
     </div>
 
-    <md-steppers md-linear="app.isLinear" md-alternative="app.isAlternative" md-card>
+    <md-steppers id="campaign-stepper" md-linear="app.isLinear" md-alternative="app.isAlternative" md-card>
       <md-stepper md-label="Select a campaign" md-editable>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
@@ -162,11 +162,11 @@
       </md-stepper>
 
       <md-steppers-actions>
-        <md-button class="md-primary">Back</md-button>
+        <md-button class="md-primary" ng-click="app.previousStep();">Back</md-button>
         <span flex></span>
 
-        <md-button>Cancel</md-button>
-        <md-button class="md-primary">Next</md-button>
+        <md-button ng-click="app.cancel();">Cancel</md-button>
+        <md-button class="md-primary" ng-click="app.nextStep();">Next</md-button>
       </md-steppers-actions>
     </md-steppers>
 

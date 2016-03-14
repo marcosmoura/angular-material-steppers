@@ -46,6 +46,10 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     });
   };
 
+  this.setCompleted = (stepNumber) => {
+    console.log('Completed', stepNumber);
+  };
+
   this.changeStep = (stepNumber) => {
     this.setActive(stepNumber);
   };
