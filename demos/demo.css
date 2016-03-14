@@ -1,9 +1,13 @@
 body {
+  margin-bottom: 100px;
   box-sizing: border-box;
   font-family: RobotoDraft, Roboto, sans-serif;
 }
 
-.main-wrapper {
-  width: 985px;
-  margin: 0 auto 24px;
+.toggle-options {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
 }

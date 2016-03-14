@@ -42,23 +42,6 @@
     outline: none;
   }
 
-  &:first-child {
-    padding-left: 0;
-
-    .md-stepper-indicator-wrapper {
-      padding-left: 16px;
-    }
-  }
-
-  &:last-child {
-    padding-right: 0;
-    justify-content: flex-end;
-
-    .md-stepper-indicator-wrapper {
-      padding-right: 24px;
-    }
-  }
-
   &.md-completed,
   &.md-active {
     .md-stepper-number {
@@ -74,6 +57,23 @@
   &.md-editable {
     .md-stepper-title {
       font-weight: 500;
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+
+    .md-stepper-indicator-wrapper {
+      padding-left: 16px;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+    justify-content: flex-end;
+
+    .md-stepper-indicator-wrapper {
+      padding-right: 24px;
     }
   }
 
@@ -151,7 +151,32 @@
 }
 
 .md-steppers-content {
+  position: relative;
+  overflow: hidden;
   flex: 1;
+  transition: $swift-ease-out;
+}
+
+md-stepper {
+  display: block;
+}
+
+.md-stepper {
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: .4s cubic-bezier(.35, 0, .25, 1);
+
+  &.md-active {
+    position: relative;
+    pointer-events: auto;
+    opacity: 1;
+  }
 }
 
 .md-steppers-actions {

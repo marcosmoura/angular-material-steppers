@@ -11,16 +11,18 @@
     <link href="demo.css" rel="stylesheet">
   </head>
 
-  <body ng-app="angular-material-steppers">
-    <div class="md-steppers md-steppers-linear md-steppers-alternative">
+  <body ng-app="angular-material-steppers" ng-controller="AppController as app">
+    <!-- <div class="md-steppers md-steppers-linear md-steppers-alternative"> -->
+    <!-- <div class="md-steppers md-steppers-alternative"> -->
+    <!-- <div class="md-steppers md-steppers-linear"> -->
+    <!-- <div class="md-steppers">
       <md-card class="md-steppers-header">
         <button class="md-stepper-indicator md-completed md-editable" md-ink-ripple>
           <div class="md-stepper-indicator-wrapper">
             <div class="md-stepper-number">
               <md-icon class="md-stepper-icon md-stepper-icon-edit">edit</md-icon>
             </div>
-            <!-- <div class="md-stepper-number">1</div> -->
-            <span class="md-stepper-title">Select campaign</span>
+            <span class="md-stepper-title">Select a campaign</span>
           </div>
         </button>
 
@@ -29,19 +31,19 @@
             <div class="md-stepper-number">
               <md-icon class="md-stepper-icon">check</md-icon>
             </div>
-            <!-- <div class="md-stepper-number">2</div> -->
-            <span class="md-stepper-title">Create an ad</span>
+            <div class="md-stepper-number">2</div>
+            <span class="md-stepper-title">Create an group</span>
           </div>
         </button>
 
-        <button class="md-stepper-indicator">
+        <button class="md-stepper-indicator" md-ink-ripple>
           <div class="md-stepper-indicator-wrapper">
             <div class="md-stepper-number">3</div>
             <span class="md-stepper-title">Create an ad</span>
           </div>
         </button>
 
-        <button class="md-stepper-indicator md-stepper-optional">
+        <button class="md-stepper-indicator md-stepper-optional" md-ink-ripple>
           <div class="md-stepper-indicator-wrapper">
             <div class="md-stepper-number">4</div>
             <div class="md-stepper-title">
@@ -54,7 +56,48 @@
 
       <div class="md-steppers-content">
         <div class="md-stepper">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        </div>
 
+        <div class="md-stepper">
+          <md-input-container>
+            <label>Username</label>
+            <input type="text" ng-model="user.name">
+          </md-input-container>
+
+          <md-input-container>
+            <label>Email</label>
+            <input type="email" ng-model="user.email">
+          </md-input-container>
+
+          <md-input-container>
+            <label>Password</label>
+            <input type="password" ng-model="user.password">
+          </md-input-container>
+
+          <md-input-container>
+            <label>Confirm password</label>
+            <input type="password" ng-model="user.confirmPassword">
+          </md-input-container>
+        </div>
+
+        <div class="md-stepper">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        </div>
+
+        <div class="md-stepper">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
         </div>
       </div>
 
@@ -65,7 +108,67 @@
         <md-button>Cancel</md-button>
         <md-button class="md-primary">Next</md-button>
       </div>
+    </div> -->
+
+    <div class="toggle-options">
+      <md-button class="md-primary md-raised" ng-click="app.toggleLinear();">Toggle Linear</md-button>
+      <md-button class="md-primary md-raised" ng-click="app.toggleAlternative();">Toggle Alternative</md-button>
     </div>
+
+    <md-steppers md-linear="app.isLinear" md-alternative="app.isAlternative" md-card>
+      <md-stepper md-label="Select a campaign" md-editable>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+      </md-stepper>
+
+      <md-stepper md-label="Create an group" md-editable>
+        <md-input-container>
+          <label>Username</label>
+          <input type="text" ng-model="user.name">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Email</label>
+          <input type="email" ng-model="user.email">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Password</label>
+          <input type="password" ng-model="user.password">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Confirm password</label>
+          <input type="password" ng-model="user.confirmPassword">
+        </md-input-container>
+      </md-stepper>
+
+      <md-stepper md-label="Create an ad" md-editable>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+      </md-stepper>
+
+      <md-stepper md-label="Publish the ad" md-editable md-optional="Optional">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nobis saepe facere suscipit atque, sapiente, natus mollitia ipsum odit accusamus repellendus deserunt. Odio sit similique, labore maxime voluptatibus, eaque autem!</p>
+      </md-stepper>
+
+      <md-steppers-actions>
+        <md-button class="md-primary">Back</md-button>
+        <span flex></span>
+
+        <md-button>Cancel</md-button>
+        <md-button class="md-primary">Next</md-button>
+      </md-steppers-actions>
+    </md-steppers>
 
     <script src="angular/angular.js"></script>
     <script src="angular-animate/angular-animate.js"></script>

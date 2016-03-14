@@ -16,21 +16,25 @@
 
   .md-stepper-indicator {
     min-height: 104px;
-    padding: 24px 0;
+    padding: 24px 16px;
     flex: 1;
     justify-content: center;
 
+    .md-stepper-indicator-wrapper {
+      padding: 0;
+    }
+
     &:first-child {
+      padding-left: 24px;
+
       &:after {
         left: 50%;
-      }
-
-      .md-stepper-indicator-wrapper {
-        padding-left: 24px;
       }
     }
 
     &:last-child {
+      padding-right: 24px;
+
       &:after {
         right: 50%;
         left: auto;
@@ -74,7 +78,8 @@
   }
 
   .md-stepper-title {
-    margin-top: 8px;
+    margin-top: 16px;
+    line-height: 18px;
 
     small {
       text-align: center;
