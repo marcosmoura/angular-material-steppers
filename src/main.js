@@ -6,7 +6,7 @@ import mdStepperService from './scripts/md-steppers/service.js';
 ((angular) => {
 
   angular
-    .module('angular-material-steppers', [
+    .module('ngMaterialSteppers', [
       'ngAnimate',
       'ngMaterial'
     ])

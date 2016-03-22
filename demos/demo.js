@@ -1,5 +1,5 @@
 angular
-  .module('angular-material-steppers')
+  .module('ngMaterialSteppers')
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('blue')
