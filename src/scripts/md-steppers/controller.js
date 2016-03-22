@@ -15,6 +15,22 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     return false;
   };
 
+  this.isCompleted = (stepNumber) => {
+    if (this.linear && stepNumber < this.stepActive) {
+      return true;
+    }
+
+    return false;
+  };
+
+  this.enableEditMode = (stepNumber) => {
+    if (this.linear && stepNumber < this.stepActive) {
+      return true;
+    }
+
+    return false;
+  };
+
   this.hasInkRipple = (stepNumber) => {
     if (this.linear || stepNumber === this.stepActive) {
       return false;
@@ -52,6 +68,18 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
 
   this.changeStep = (stepNumber) => {
     this.setActive(stepNumber);
+  };
+
+  this.clickAction = function(stepNumber) {
+    if (this.enableEditMode(stepNumber)) {
+      this.setActive(stepNumber);
+
+      return true;
+    }
+
+    if (!this.linear && !this.isActive(stepNumber)) {
+      this.changeStep(stepNumber);
+    }
   };
 
 }

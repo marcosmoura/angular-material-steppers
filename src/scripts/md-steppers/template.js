@@ -10,12 +10,13 @@ export default function($element, $attributes) {
         'md-editable': $step.editable && $mdSteppers.enableEditMode(stepNumber),
         'md-stepper-optional': $step.optional
       }"
-      ng-click="!$mdSteppers.linear && !$mdSteppers.isActive(stepNumber) && $mdSteppers.changeStep(stepNumber)"
-      md-ink-ripple="{{ $mdSteppers.hasInkRipple(stepNumber) }}">
+      ng-click="$mdSteppers.clickAction(stepNumber)"
+      md-ink-ripple="{{ $mdSteppers.hasInkRipple(stepNumber) || $mdSteppers.enableEditMode(stepNumber) }}">
       <div class="md-stepper-indicator-wrapper">
         <div class="md-stepper-number">
-          <span>{{ ::stepNumber+1 }}</span>
+          <span ng-if="!$mdSteppers.isCompleted(stepNumber) && !$mdSteppers.enableEditMode(stepNumber)">{{ ::stepNumber+1 }}</span>
           <md-icon class="md-stepper-icon md-stepper-icon-edit" ng-if="$step.editable" ng-show="$mdSteppers.enableEditMode(stepNumber)">edit</md-icon>
+          <md-icon class="md-stepper-icon" ng-if="$mdSteppers.isCompleted(stepNumber) && !$mdSteppers.enableEditMode(stepNumber)">check</md-icon>
         </div>
 
         <div class="md-stepper-title">

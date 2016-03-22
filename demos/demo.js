@@ -6,7 +6,7 @@ angular
       .accentPalette('red');
   })
   .controller('AppController', function($mdSteppers) {
-    this.isLinear = false;
+    this.isLinear = true;
     this.isAlternative = false;
     this.stepsCount = 3;
     this.currentStep = 0;
