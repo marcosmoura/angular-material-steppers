@@ -10,7 +10,7 @@
   "authors": [
     "Marcos Moura <marcosvmmoura@gmail.com>"
   ],
-  "main": "dest/angular-material-steppers.js",
+  "main": "index.js",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.2",
