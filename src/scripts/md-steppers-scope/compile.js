@@ -1,5 +1,11 @@
 export default function($topElement, $topAttributes, $transclude) {
+
+  'ngInject';
+
   return function postLink($scope, $element) {
+
+    'ngInject';
+
     let $controller = $scope;
     let newScope = $controller.$parent.$new();
 
@@ -35,4 +41,5 @@ export default function($topElement, $topAttributes, $transclude) {
       $element.after(clone);
     });
   };
+
 }

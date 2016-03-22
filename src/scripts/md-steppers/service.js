@@ -1,4 +1,7 @@
 let service = ($mdComponentRegistry) => {
+
+  'ngInject';
+
   return function(handle) {
     let instance = $mdComponentRegistry.get(handle);
 
@@ -8,6 +11,7 @@ let service = ($mdComponentRegistry) => {
 
     return instance;
   };
+
 };
 
 export default {

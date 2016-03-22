@@ -1,5 +1,7 @@
 export default function($scope, $element, $attributes, $controller) {
 
+  'ngInject';
+
   $scope.$mdStepper = {};
 
   $controller.addStep({

@@ -5,6 +5,8 @@ let component = 'mdSteppers';
 
 let directive = ($mdComponentRegistry, $log) => {
 
+  'ngInject';
+
   return {
     restrict: 'E',
     scope: {
@@ -14,6 +16,9 @@ let directive = ($mdComponentRegistry, $log) => {
     },
     template,
     link: ($scope, $element, $attributes, $controller) => {
+
+      'ngInject';
+
       if (!$attributes.id) {
         $log.warn('You must set an id attribute to your stepper');
       }
@@ -23,6 +28,7 @@ let directive = ($mdComponentRegistry, $log) => {
         setCompleted: $controller.setCompleted,
         isActive: $controller.isActive
       }, $attributes.id);
+
     },
     controller,
     controllerAs: `$${component}`,

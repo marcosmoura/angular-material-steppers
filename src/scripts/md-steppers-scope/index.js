@@ -4,6 +4,8 @@ let component = 'mdSteppersScope';
 
 let directive = () => {
 
+  'ngInject';
+
   return {
     restrict: 'AE',
     compile: compile,
