@@ -2,7 +2,7 @@
   "projectName": "Angular Material Steppers",
   "name": "angular-material-steppers",
   "description": "A Angular Material directive to create Steppers following the Material Design spec.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcosmoura/angular-material-steppers.git"
@@ -50,7 +50,6 @@
     "imagemin-pngquant": "^4.2.2",
     "metalsmith-beautify": "0.0.7",
     "metalsmith-layouts": "^1.6.4",
-    "ng-annotate-loader": "^0.1.0",
     "pretty-hrtime": "^1.0.2",
     "run-sequence": "^1.1.5",
     "sass-module-importer": "^1.0.2",
@@ -67,7 +66,6 @@
     "angular": "^1.5.0",
     "angular-animate": "^1.5.0",
     "angular-aria": "^1.5.0",
-    "angular-material": "^1.0.6",
-    "browserify-ngannotate": "^2.0.0"
+    "angular-material": "^1.0.6"
   }
 }

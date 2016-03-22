@@ -1,7 +1,5 @@
 export default function($element, $attributes) {
 
-  'ngInject';
-
   let $steppersContent = `
     <button
       class="md-stepper-indicator"

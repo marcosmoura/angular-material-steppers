@@ -1,7 +1,5 @@
 export default function($topElement, $topAttributes, $transclude) {
 
-  'ngInject';
-
   return function postLink($scope, $element) {
 
     'ngInject';
