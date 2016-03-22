@@ -5,6 +5,8 @@ let component = 'mdSteppers';
 
 let directive = ($mdComponentRegistry, $log) => {
 
+  'ngInject';
+
   return {
     restrict: 'E',
     scope: {
@@ -13,7 +15,7 @@ let directive = ($mdComponentRegistry, $log) => {
       alternative: '=?mdAlternative'
     },
     template,
-    link: ['$scope', '$element', '$attributes', '$controller', ($scope, $element, $attributes, $controller) => {
+    link: ($scope, $element, $attributes, $controller) => {
 
       'ngInject';
 
@@ -27,7 +29,7 @@ let directive = ($mdComponentRegistry, $log) => {
         isActive: $controller.isActive
       }, $attributes.id);
 
-    }],
+    },
     controller,
     controllerAs: `$${component}`,
     bindToController: true

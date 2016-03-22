@@ -9,6 +9,7 @@ import xtend from 'xtend';
 import prettyTime from 'pretty-hrtime';
 import browserify from 'browserify';
 import uglifyify from 'uglifyify';
+import ngannotate from 'browserify-ngannotate';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import config from '../config';
@@ -67,6 +68,7 @@ gulp.task('browserify-build', () => {
 
   return browserify(entry)
     .transform(babelify.configure())
+    .transform(ngannotate)
     .transform(uglifyify)
     .bundle()
     .pipe(source(app))

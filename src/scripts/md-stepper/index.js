@@ -5,6 +5,8 @@ let component = 'mdStepper';
 
 let directive = () => {
 
+  'ngInject';
+
   return {
     restrict: 'E',
     require: '^mdSteppers',

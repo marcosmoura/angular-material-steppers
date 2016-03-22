@@ -1,5 +1,7 @@
 export default function($scope, $document, $element, $animateCss, $mdUtil) {
 
+  'ngInject';
+
   this.steps = [];
   this.stepActive = 0;
 

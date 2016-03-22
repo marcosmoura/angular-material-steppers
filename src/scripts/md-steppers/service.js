@@ -1,5 +1,7 @@
 let service = ($mdComponentRegistry) => {
 
+  'ngInject';
+
   return function(handle) {
     let instance = $mdComponentRegistry.get(handle);
 
