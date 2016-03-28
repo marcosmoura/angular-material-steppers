@@ -1,11 +1,15 @@
 import runSequence from 'run-sequence';
 import gulp from 'gulp';
 import './tasks/clean';
-import './tasks/browserify';
+import './tasks/webpack';
 import './tasks/sass';
 import './tasks/eslint';
 import './tasks/watch';
 
 gulp.task('default', () => {
-  runSequence('clean', ['browserify', 'eslint-all', 'sass'], 'watch');
+  runSequence('clean', ['webpack', 'eslint-all', 'sass'], 'watch');
+});
+
+gulp.task('build', () => {
+  runSequence('clean', ['webpack-build', 'sass-build']);
 });

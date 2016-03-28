@@ -11,13 +11,12 @@ let watchConfig = {
 gulp.task('watch', ['browserSync'], () => {
   watch(config.gulpScripts.concat(config.srcScripts), watchConfig, () => {
     runSequence('eslint');
+    runSequence('webpack', browserSync.reload);
   });
 
   watch(config.srcStylesheets, watchConfig, () => {
     runSequence('sass');
   });
 
-  watch(config.joinPath(config.demoFolder, config.demoFiles), watchConfig, () => {
-    browserSync.reload();
-  });
+  watch(config.joinPath(config.demoFolder, config.demoFiles), watchConfig, browserSync.reload);
 });
