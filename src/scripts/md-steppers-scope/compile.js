@@ -2,27 +2,25 @@ export default function($topElement, $topAttributes, $transclude) {
 
   return function postLink($scope, $element) {
 
-    'ngInject';
-
     let $controller = $scope;
     let newScope = $controller.$parent.$new();
 
     newScope.$index = $scope.$index;
 
-    $scope.$watch('$index', function(value) {
+    $scope.$watch('$index', (value) => {
       newScope.$index = value;
     });
 
     let scopeDigesting = false;
     let newScopeDigesting = false;
 
-    $scope.$watch(function() {
+    $scope.$watch(() => {
       if (newScopeDigesting || scopeDigesting) {
         return;
       }
 
       scopeDigesting = true;
-      $scope.$$postDigest(function() {
+      $scope.$$postDigest(() => {
         if (!newScopeDigesting) {
           newScope.$digest();
         }
@@ -31,13 +29,14 @@ export default function($topElement, $topAttributes, $transclude) {
       });
     });
 
-    newScope.$watch(function() {
+    newScope.$watch(() => {
       newScopeDigesting = true;
     });
 
-    $transclude(newScope, function(clone) {
+    $transclude(newScope, (clone) => {
       $element.after(clone);
     });
+
   };
 
 }

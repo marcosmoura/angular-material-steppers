@@ -10,11 +10,6 @@ let directive = () => {
   return {
     restrict: 'E',
     require: '^mdSteppers',
-    scope: {
-      label: '@mdLabel',
-      editable: '=mdEditable',
-      optional: '@?mdOptional'
-    },
     link,
     template
   };
