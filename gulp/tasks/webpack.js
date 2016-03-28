@@ -19,7 +19,7 @@ gulp.task('webpack', () => {
       module: {
         loaders: [
           {
-            loaders: ['ng-annotate', 'babel-loader']
+            loaders: ['babel-loader']
           }
         ]
       }
