@@ -7,7 +7,7 @@ export default function($element, $attributes) {
       ng-class="{
         'md-active': $mdSteppers.isActive(stepNumber),
         'md-completed': $mdSteppers.isCompleted(stepNumber),
-        'md-editable': $step.editable && $mdSteppers.enableEditMode(stepNumber),
+        'md-editable': $step.editable && $mdSteppers.enableEditMode(stepNumber, $step.editable),
         'md-stepper-optional': $step.optional
       }"
       ng-click="$mdSteppers.clickAction(stepNumber)"

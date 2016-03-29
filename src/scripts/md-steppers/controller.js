@@ -25,8 +25,8 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     return false;
   };
 
-  this.enableEditMode = (stepNumber) => {
-    if (this.linear && stepNumber < this.stepActive) {
+  this.enableEditMode = (stepNumber, hasEditing) => {
+    if (hasEditing && (this.linear && stepNumber < this.stepActive)) {
       return true;
     }
 
