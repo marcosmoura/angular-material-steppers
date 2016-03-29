@@ -72,8 +72,8 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     this.setActive(stepNumber);
   };
 
-  this.clickAction = function(stepNumber) {
-    if (this.enableEditMode(stepNumber)) {
+  this.clickAction = function(stepNumber, editing) {
+    if (this.enableEditMode(stepNumber, editing)) {
       this.setActive(stepNumber);
 
       return true;
