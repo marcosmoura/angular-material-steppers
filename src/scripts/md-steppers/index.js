@@ -21,12 +21,16 @@ let directive = ($mdComponentRegistry, $log) => {
         $log.warn('You must set an id attribute to your stepper');
       }
 
-      $mdComponentRegistry.register({
+      let registeredStepper = $mdComponentRegistry.register({
         changeStep: $controller.changeStep,
         setCompleted: $controller.setCompleted,
         isActive: $controller.isActive,
         getCurrentStep: $controller.getCurrentStep
       }, $attributes.id);
+
+      $scope.$on('$destroy', function() {
+        registeredStepper();
+      });
 
     },
     controller,
