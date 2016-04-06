@@ -6,6 +6,7 @@ export default function($element, $attributes) {
       ng-repeat="(stepNumber, $step) in $mdSteppers.steps track by $index"
       ng-class="{
         'md-active': $mdSteppers.isActive(stepNumber),
+        'md-completed': $mdSteppers.isCompleted(stepNumber),
         'md-error': $mdSteppers.hasError(stepNumber),
         'md-editable': $step.editable && $mdSteppers.enableEditMode(stepNumber, $step.editable),
         'md-stepper-optional': $step.optional || $mdSteppers.hasError(stepNumber)
