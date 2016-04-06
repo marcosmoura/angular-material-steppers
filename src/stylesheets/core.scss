@@ -60,6 +60,12 @@
     }
   }
 
+  &.md-error {
+    .md-stepper-title {
+      color: $color-step-error;
+    }
+  }
+
   &:first-child {
     padding-left: 0;
 
@@ -118,6 +124,26 @@
   font-size: 12px;
   line-height: $size;
   text-align: center;
+
+  &.ng-hide {
+    transition: none;
+  }
+}
+
+.md-error {
+  .md-stepper-error-indicator {
+    margin: 0 8px;
+    background-color: #fff;
+
+    md-icon {
+      color: $color-step-error;
+    }
+  }
+
+  .md-stepper-error-message {
+    color: $color-step-error;
+    font-weight: 400;
+  }
 }
 
 .md-stepper-icon {

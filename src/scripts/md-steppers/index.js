@@ -23,9 +23,10 @@ let directive = ($mdComponentRegistry, $log) => {
 
       let registeredStepper = $mdComponentRegistry.register({
         changeStep: $controller.changeStep,
-        setCompleted: $controller.setCompleted,
         isActive: $controller.isActive,
-        getCurrentStep: $controller.getCurrentStep
+        getCurrentStep: $controller.getCurrentStep,
+        setError: $controller.setError,
+        clearError: $controller.clearError
       }, $attributes.id);
 
       $scope.$on('$destroy', function() {

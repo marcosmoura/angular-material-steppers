@@ -4,6 +4,7 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
 
   this.steps = [];
   this.stepActive = 0;
+  this.stepsErrors = [];
 
   this.addStep = (step) => {
     this.steps.push(step);
@@ -47,6 +48,10 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
 
     this.stepActive = stepNumber;
 
+    if (this.stepsErrors[stepNumber]) {
+      this.stepsErrors[stepNumber].hasError = false;
+    }
+
     $animateCss($steppersContent, {
       from: { height: $steppersContent[0].clientHeight + 'px' },
       to: { height: $stepper.prop('clientHeight') + 'px' },
@@ -58,14 +63,10 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
         height: ''
       });
 
-      $mdUtil.nextTick(function() {
+      $mdUtil.nextTick(() => {
         $steppersContent.css('transition', '');
       });
     });
-  };
-
-  this.setCompleted = (stepNumber) => {
-    console.log('Completed', stepNumber);
   };
 
   this.changeStep = (stepNumber) => {
@@ -76,7 +77,7 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     return this.stepActive;
   };
 
-  this.clickAction = function(stepNumber, editing) {
+  this.clickAction = (stepNumber, editing) => {
     if (this.enableEditMode(stepNumber, editing)) {
       this.setActive(stepNumber);
 
@@ -86,6 +87,27 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     if (!this.linear && !this.isActive(stepNumber)) {
       this.changeStep(stepNumber);
     }
+  };
+
+  this.setError = (stepNumber, message) => {
+    this.stepsErrors[stepNumber] = {};
+
+    let step = this.stepsErrors[stepNumber];
+
+    step.hasError = true;
+    step.message = message;
+  };
+
+  this.clearError = (stepNumber) => {
+    let step = this.stepsErrors[stepNumber];
+
+    step.hasError = false;
+  };
+
+  this.hasError = (stepNumber) => {
+    let step = this.stepsErrors[stepNumber];
+
+    return step && step.hasError;
   };
 
 }

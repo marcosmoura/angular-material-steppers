@@ -54,7 +54,8 @@
     background: none;
   }
 
-  .md-stepper-number {
+  .md-stepper-number,
+  .md-stepper-error-indicator {
     position: relative;
 
     &:before,

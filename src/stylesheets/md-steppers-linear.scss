@@ -22,7 +22,7 @@
   .md-stepper-title {
     color: rgba(0, 0, 0, .26);
 
-    small {
+    small:not(.md-stepper-error-message) {
       color: rgba(0, 0, 0, .26);
     }
   }

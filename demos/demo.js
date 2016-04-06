@@ -37,4 +37,16 @@ angular
       steppers.changeStep(this.currentStep === this.stepsCount ? 0 : this.currentStep++);
     };
 
+    this.showError = function() {
+      var steppers = $mdSteppers('campaign-stepper');
+
+      steppers.setError(this.currentStep, 'Wrong campaign');
+    };
+
+    this.clearError = function() {
+      var steppers = $mdSteppers('campaign-stepper');
+
+      steppers.clearError(this.currentStep);
+    };
+
   });

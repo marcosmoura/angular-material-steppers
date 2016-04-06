@@ -3,9 +3,12 @@
     text-align: left;
     white-space: nowrap;
 
+    small:not(.md-stepper-error-message) {
+      color: rgba(0, 0, 0, .54);
+    }
+
     small {
       transition: $swift-ease-out;
-      color: rgba(0, 0, 0, .54);
       font-size: 12px;
       line-height: 1em;
     }
