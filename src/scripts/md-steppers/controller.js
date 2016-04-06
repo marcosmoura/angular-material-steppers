@@ -99,9 +99,9 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
   };
 
   this.clearError = (stepNumber) => {
-    let step = this.stepsErrors[stepNumber];
-
-    step.hasError = false;
+    if (this.stepsErrors[stepNumber]) {
+      this.stepsErrors[stepNumber].hasError = false;
+    }
   };
 
   this.hasError = (stepNumber) => {
