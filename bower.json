@@ -2,7 +2,7 @@
   "projectName": "Angular Material Steppers",
   "name": "angular-material-steppers",
   "description": "A Angular Material directive to create Steppers following the Material Design spec.",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcosmoura/angular-material-steppers.git"
