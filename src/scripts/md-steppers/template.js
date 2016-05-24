@@ -2,6 +2,7 @@ export default function($element, $attributes) {
 
   let $steppersContent = `
     <button
+      type="button"
       class="md-stepper-indicator"
       ng-repeat="(stepNumber, $step) in $mdSteppers.steps track by $index"
       ng-class="{
@@ -11,7 +12,7 @@ export default function($element, $attributes) {
         'md-editable': $step.editable && $mdSteppers.enableEditMode(stepNumber, $step.editable),
         'md-stepper-optional': $step.optional || $mdSteppers.hasError(stepNumber)
       }"
-      ng-click="$mdSteppers.clickAction(stepNumber)"
+      ng-click="$mdSteppers.clickAction(stepNumber, $step.editable)"
       md-ink-ripple="{{ $mdSteppers.hasInkRipple(stepNumber) || $mdSteppers.enableEditMode(stepNumber, $step.editable) }}">
       <div class="md-stepper-indicator-wrapper">
         <div class="md-stepper-number" ng-hide="$mdSteppers.hasError(stepNumber)">
