@@ -77,6 +77,18 @@ export default function($scope, $document, $element, $animateCss, $mdUtil) {
     return this.stepActive;
   };
 
+  this.getStepMetadata = (stepNumber) => {
+    let step = this.steps[stepNumber];
+
+    let stepMetadata = {
+      label: step.label,
+      editable: step.editable,
+      optional: step.optional
+    };
+    
+    return stepMetadata;
+  };
+
   this.clickAction = (stepNumber, editing) => {
     if (this.enableEditMode(stepNumber, editing)) {
       this.setActive(stepNumber);

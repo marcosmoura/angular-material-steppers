@@ -25,6 +25,7 @@ let directive = ($mdComponentRegistry, $log) => {
         changeStep: $controller.changeStep,
         isActive: $controller.isActive,
         getCurrentStep: $controller.getCurrentStep,
+        getStepMetadata: $controller.getStepMetadata,
         setError: $controller.setError,
         clearError: $controller.clearError
       }, $attributes.id);
